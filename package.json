@@ -1,0 +1,21 @@
+{
+  "name": "black_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server --browser=firefox",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lp-hub/black.git"
+  },
+  "author": "https://github.com/lp-hub/black.git",
+  "license": "ISC", 
+  "bugs": {
+    "url": "https://github.com/lp-hub/black/issues"
+  },
+  "homepage": "https://github.com/lp-hub/black#readme"
+}

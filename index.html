@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private Company</title>
+    <meta name="Private Company" content="Private Company" />
+    <script
+      src="https://kit.fontawesome.com/75e53ee709.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" href="font-url"> -->
+    <!-- <link rel="icon" href="icon-url"> -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="button button--black button--effect logo">
+        <a href="0index.html">PRIVATE COMPANY</a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-btns">
+          <li class="button button--black">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="button button--black">
+            <a href="#">Project</a>
+          </li>
+          <li
+            class="button button--black"
+            onclick="contactFunction()"
+            id="contactBtnH"
+          >
+            <a href="#contactBtn">Contact</a>
+          </li>
+        </ul>
+        <!-- toggle__menu -->
+        <div class="toggle__menu">
+          <span class="toggle__menu-bar1 span--animation"></span>
+          <span class="toggle__menu-bar2 span--animation"></span>
+          <span class="toggle__menu-bar3 span--animation"></span>
+          <ul class="toggle__menu-btns">
+            <li class="button button--black toggle__menu-link">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="button button--black toggle__menu-link">
+              <a href="#">Project</a>
+            </li>
+            <li
+              class="button button--black toggle__menu-link"
+              onclick="contactToggleMenu()"
+              id="contactBtnT"
+            >
+              <a href="#contactBtn">Contact</a>
+            </li>
+            <!-- toggle__menu footer buttons -->
+            <li class="button button--black">
+              <a href="#">
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M25 4.74844C24.0703 5.15625 23.0797 5.42656 22.0469 5.55781C23.1094 4.92344 23.9203 3.92656 24.3016 2.725C23.3109 3.31562 22.2172 3.73281 21.0516 3.96563C20.1109 2.96406 18.7703 2.34375 17.3078 2.34375C14.4703 2.34375 12.1859 4.64688 12.1859 7.47031C12.1859 7.87656 12.2203 8.26719 12.3047 8.63906C8.04375 8.43125 4.27344 6.38906 1.74062 3.27813C1.29844 4.04531 1.03906 4.92344 1.03906 5.86875C1.03906 7.64375 1.95312 9.21719 3.31562 10.1281C2.49219 10.1125 1.68437 9.87344 1 9.49688C1 9.5125 1 9.53281 1 9.55312C1 12.0437 2.77656 14.1125 5.10625 14.5891C4.68906 14.7031 4.23438 14.7578 3.7625 14.7578C3.43438 14.7578 3.10312 14.7391 2.79219 14.6703C3.45625 16.7 5.34063 18.1922 7.58125 18.2406C5.8375 19.6047 3.62344 20.4266 1.22656 20.4266C0.80625 20.4266 0.403125 20.4078 0 20.3563C2.27031 21.8203 4.96094 22.6562 7.8625 22.6562C17.2937 22.6562 22.45 14.8438 22.45 8.07187C22.45 7.84531 22.4422 7.62656 22.4312 7.40938C23.4484 6.6875 24.3031 5.78594 25 4.74844Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="25" height="25" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </li>
+            <li class="button button--black">
+              <a href="#">
+                <svg
+                  width="25"
+                  height="25"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.4375 0H6.5625C2.93869 0 0 2.93869 0 6.5625V14.4375C0 18.0613 2.93869 21 6.5625 21H14.4375C18.0613 21 21 18.0613 21 14.4375V6.5625C21 2.93869 18.0613 0 14.4375 0ZM19.0312 14.4375C19.0312 16.9706 16.9706 19.0312 14.4375 19.0312H6.5625C4.02938 19.0312 1.96875 16.9706 1.96875 14.4375V6.5625C1.96875 4.02938 4.02938 1.96875 6.5625 1.96875H14.4375C16.9706 1.96875 19.0312 4.02938 19.0312 6.5625V14.4375Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M10.5 5.25C7.60069 5.25 5.25 7.60069 5.25 10.5C5.25 13.3993 7.60069 15.75 10.5 15.75C13.3993 15.75 15.75 13.3993 15.75 10.5C15.75 7.60069 13.3993 5.25 10.5 5.25ZM10.5 13.7812C8.69138 13.7812 7.21875 12.3086 7.21875 10.5C7.21875 8.69006 8.69138 7.21875 10.5 7.21875C12.3086 7.21875 13.7812 8.69006 13.7812 10.5C13.7812 12.3086 12.3086 13.7812 10.5 13.7812Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M16.1439 5.55586C16.5303 5.55586 16.8435 5.24266 16.8435 4.8563C16.8435 4.46994 16.5303 4.15674 16.1439 4.15674C15.7575 4.15674 15.4443 4.46994 15.4443 4.8563C15.4443 5.24266 15.7575 5.55586 16.1439 5.55586Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="button button--black">
+              <a href="#">
+                <svg
+                  width="28"
+                  height="30"
+                  viewBox="0 0 28 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M26.5334 7.11763C26.2029 5.68172 25.0284 4.62234 23.6145 4.46431C20.2664 4.09056 16.8775 4.08861 13.5043 4.09056C10.1305 4.08861 6.74115 4.09056 3.39301 4.46431C1.97995 4.62234 0.806307 5.68172 0.475757 7.11763C0.0052955 9.16252 0 11.3947 0 13.5001C0 15.6055 0 17.8374 0.470462 19.882C0.800454 21.3176 1.97438 22.377 3.38827 22.5353C6.73613 22.9093 10.1252 22.9113 13.499 22.9093C16.8734 22.9113 20.2616 22.9093 23.6092 22.5353C25.0223 22.3773 26.197 21.3179 26.5276 19.882C26.9983 17.8371 27 15.6052 27 13.5001C27 11.3947 27.0039 9.16252 26.5334 7.11763ZM10.0157 17.6908C10.0157 14.7041 10.0157 11.7487 10.0157 8.76174C12.8772 10.2548 15.7198 11.7378 18.5994 13.24C15.7287 14.7289 12.8847 16.203 10.0157 17.6908Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- toggle__menu -->
+      </nav>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Main Section -->
+    <main class="main">
+      <!-- carousel -->
+      <section class="slideshow__container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="./img/alps.jpg" />
+          <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="./img/mountains.jpg" />
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="./img/skyline-new-york-bw-wall-mural-5760-p.jpg" />
+          <div class="text">Caption Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="dot__container">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </section>
+      <hr />
+      <!-- carousel -->
+
+      <!-- cards -->
+      <section class="card__container">
+        <div class="card card--horizontal card--red">
+          <img
+            src="./img/skyline-new-york-bw-wall-mural-5760-p.jpg"
+            alt="card image"
+          />
+          <div class="card__content">
+            <div class="card__title">
+              <h3><a href="#">Your Title Your Title</a></h3>
+            </div>
+            <div class="card__text">
+              Lorem ipsum dolor sit nsectetur adipisicing elit. Similique
+              architecto voluptatem dignissimos rerum doloribus vero dolore
+              adipisci, maiores commodi ullam suscipit dolores cum. Vel, nemo!
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--horizontal card--red card--red">
+          <img src="./img/mountains.jpg" alt="card image" />
+          <div class="card__content">
+            <div class="card__title">
+              <h3><a href="#">Your Title Your Title Your Title</a></h3>
+            </div>
+            <div class="card__text">
+              Lorem ipsum dolor sit nsectetur adipisicing elit. Similique
+              architecto voluptatem dignissimos rerum doloribus vero dolore
+              adipisci, maiores commodi ullam suscipit dolores cum. Vel, nemo!
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--horizontal card--red">
+          <img src="./img/alps.jpg" alt="card image" />
+          <div class="card__content">
+            <div class="card__title">
+              <h3><a href="#">Your Title Your Title Your Title</a></h3>
+            </div>
+            <div class="card__text">
+              Lorem ipsum dolor sit nsectetur adipisicing elit. Similique
+              architecto voluptatem dignissimos rerum doloribus vero dolore
+              adipisci, maiores commodi ullam suscipit dolores cum. Vel, nemo!
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SHOW MORE -->
+      <span id="dots"></span>
+      <span id="more">
+        <!-- SHOW MORE -->
+        <section class="card__container">
+          <div class="card card--horizontal card--red">
+            <img
+              src="./img/skyline-new-york-bw-wall-mural-5760-p.jpg"
+              alt="card image"
+            />
+            <div class="card__content">
+              <div class="card__title">
+                <h3><a href="#">Your Title Your Title Your Title</a></h3>
+              </div>
+              <div class="card__text">
+                Lorem ipsum dolor sit nsectetur adipisicing elit. Similique
+                architecto voluptatem dignissimos rerum doloribus vero dolore
+                adipisci, maiores commodi ullam suscipit dolores cum. Vel, nemo!
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--horizontal card--red">
+            <img src="./img/mountains.jpg" alt="card image" />
+            <div class="card__content">
+              <div class="card__title">
+                <h3><a href="#">Your Title Your Title Your Title</a></h3>
+              </div>
+              <div class="card__text">
+                Lorem ipsum dolor sit nsectetur adipisicing elit. Similique
+                architecto voluptatem dignissimos rerum doloribus vero dolore
+                adipisci, maiores commodi ullam suscipit dolores cum. Vel, nemo!
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--horizontal card--red">
+            <img src="./img/alps.jpg" alt="card image" />
+            <div class="card__content">
+              <div class="card__title">
+                <h3><a href="#">Your Title Your Title Your Title</a></h3>
+              </div>
+              <div class="card__text">
+                Lorem ipsum dolor sit nsectetur adipisicing elit. Similique
+                architecto voluptatem dignissimos rerum doloribus vero dolore
+                adipisci, maiores commodi ullam suscipit dolores cum. Vel, nemo!
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--horizontal card--red">
+            <img
+              src="./img/skyline-new-york-bw-wall-mural-5760-p.jpg"
+              alt="card image"
+            />
+            <div class="card__content">
+              <div class="card__title">
+                <h3><a href="#">Your Title Your Title Your Title</a></h3>
+              </div>
+              <div class="card__text">
+                Lorem ipsum dolor sit nsectetur adipisicing elit. Similique
+                architecto voluptatem dignissimos rerum doloribus vero dolore
+                adipisci, maiores commodi ullam suscipit dolores cum. Vel, nemo!
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--horizontal card--red">
+            <img src="./img/alps.jpg" alt="card image" />
+            <div class="card__content">
+              <div class="card__title">
+                <h3><a href="#">Your Title Your Title Your Title</a></h3>
+              </div>
+              <div class="card__text">
+                Lorem ipsum dolor sit nsectetur adipisicing elit. Similique
+                architecto voluptatem dignissimos rerum doloribus vero dolore
+                adipisci, maiores commodi ullam suscipit dolores cum. Vel, nemo!
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--horizontal card--red">
+            <img
+              src="./img/skyline-new-york-bw-wall-mural-5760-p.jpg"
+              alt="card image"
+            />
+            <div class="card__content">
+              <div class="card__title">
+                <h3><a href="#">Your Title Your Title Your Title</a></h3>
+              </div>
+              <div class="card__text">
+                Lorem ipsum dolor sit nsectetur adipisicing elit. Similique
+                architecto voluptatem dignissimos rerum doloribus vero dolore
+                adipisci, maiores commodi ullam suscipit dolores cum. Vel, nemo!
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--horizontal card--red">
+            <img src="./img/alps.jpg" alt="card image" />
+            <div class="card__content">
+              <div class="card__title">
+                <h3><a href="#">Your Title Your Title Your Title</a></h3>
+              </div>
+              <div class="card__text">
+                Lorem ipsum dolor sit nsectetur adipisicing elit. Similique
+                architecto voluptatem dignissimos rerum doloribus vero dolore
+                adipisci, maiores commodi ullam suscipit dolores cum. Vel, nemo!
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--horizontal card--red">
+            <img src="./img/mountains.jpg" alt="card image" />
+            <div class="card__content">
+              <div class="card__title">
+                <h3><a href="#">Your Title Your Title Your Title</a></h3>
+              </div>
+              <div class="card__text">
+                Lorem ipsum dolor sit nsectetur adipisicing elit. Similique
+                architecto voluptatem dignissimos rerum doloribus vero dolore
+                adipisci, maiores commodi ullam suscipit dolores cum. Vel, nemo!
+              </div>
+            </div>
+          </div>
+        </section>
+      </span>
+      <!-- SHOW MORE -->
+      <button
+        class="button button--black button--animation more__link"
+        onclick="myFunction()"
+        id="myBtn"
+      >
+        Show more...
+      </button>
+      <!-- SHOW MORE -->
+      <!-- cards -->
+
+      <!-- About Section -->
+      <!-- services -->
+      <section class="service__container">
+        <div class="service">
+          <h3>Web Design</h3>
+          <i class="fas fa-pen-nib fa-3x"></i>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta,
+            pariatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Omnis porro inventore magnam ducimus et tenetur consectetur, iusto,
+            deserunt deleniti quod ipsum. Illum, adipisci veniam dicta
+            reprehenderit placeat omnis aliquid iste.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Web Development</h3>
+          <i class="fas fa-pencil-ruler fa-3x"></i>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta,
+            pariatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Omnis porro inventore magnam ducimus et tenetur consectetur, iusto,
+            deserunt deleniti quod ipsum. Illum, adipisci veniam dicta
+            reprehenderit placeat omnis aliquid iste.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Web Hosting</h3>
+          <i class="fas fa-database fa-3x"></i>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta,
+            pariatur. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Omnis porro inventore magnam ducimus et tenetur consectetur, iusto,
+            deserunt deleniti quod ipsum. Illum, adipisci veniam dicta
+            reprehenderit placeat omnis aliquid iste.
+          </p>
+        </div>
+      </section>
+      <!-- services -->
+
+      <!-- texts -->
+      <section class="text__boxes">
+        <div class="text__box">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+            ipsum corporis quae! Fuga error, placeat dolorum illum dolor
+            eligendi. Id, labore suscipit. Incidunt nulla cum, quo minima
+            perferendis quam ea.
+          </p>
+        </div>
+        <div class="text__box">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+            ipsum corporis quae! Fuga error, placeat dolorum illum dolor
+            eligendi. Id, labore suscipit. Incidunt nulla cum, quo minima
+            perferendis quam ea.
+          </p>
+        </div>
+        <div class="text__box">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+            ipsum corporis quae! Fuga error, placeat dolorum illum dolor
+            eligendi. Id, labore suscipit. Incidunt nulla cum, quo minima
+            perferendis quam ea.
+          </p>
+        </div>
+        <div class="text__box">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+            ipsum corporis quae! Fuga error, placeat dolorum illum dolor
+            eligendi. Id, labore suscipit. Incidunt nulla cum, quo minima
+            perferendis quam ea.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <!-- texts -->
+
+      <!-- Contact Section -->
+      <!-- SHOW MORE -->
+      <span id="contact"></span>
+      <span id="more__contact">
+        <!-- SHOW MORE -->
+        <form class="signup-form" action="mail.php" method="POST">
+          <div class="form__name-mail-where">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="First Name"
+              required
+            />
+          </div>
+
+          <div class="form__name-mail-where">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="your@mail.address"
+              required
+            />
+          </div>
+
+          <div class="form__name-mail-where">
+            <label for="select__where">Where did you hear from us?</label>
+            <select id="select__where" required>
+              <option value="">Please choose one option:</option>
+              <option value="friends">Friends and family</option>
+              <option value="youtube">YouTube video</option>
+              <option value="podcast">Podcast</option>
+              <option value="ad">Facebook ad</option>
+              <option value="others">Others</option>
+            </select>
+          </div>
+
+          <div class="form__name-mail-where">
+            <label for="email-sub">Sign up for mail newsletter</label>
+            <input
+              type="checkbox"
+              name="email-sub"
+              id="email-sub"
+              value="sign-me-up"
+              checked
+            />
+          </div>
+
+          <div class="form__input">
+            <textarea
+              name="subject"
+              id="subject"
+              cols="30"
+              rows="2"
+              placeholder="Contact us!"
+            ></textarea>
+          </div>
+          <input class="button button--red" type="submit" value="Submit" />
+        </form>
+      </span>
+      <!-- MORE CONTACT -->
+      <button
+        class="button button--black button--animation more__contact-link"
+        onclick="contactFunction()"
+        id="contactBtn"
+      >
+        <b>Contact Us!</b>
+      </button>
+      <!-- MORE CONTACT -->
+      <!-- End of Contact Section -->
+    </main>
+    <!--End of  Main Section -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="button button--black logo logoBtn" id="logoBtn">
+        <a href="#">PRIVATE COMPANY &copy; <span class="year">2022</span></a>
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__nav-btns">
+          <li class="button button--black">
+            <a href="#">
+              <svg
+                width="28"
+                height="30"
+                viewBox="0 0 28 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0)">
+                  <path
+                    d="M25 4.74844C24.0703 5.15625 23.0797 5.42656 22.0469 5.55781C23.1094 4.92344 23.9203 3.92656 24.3016 2.725C23.3109 3.31562 22.2172 3.73281 21.0516 3.96563C20.1109 2.96406 18.7703 2.34375 17.3078 2.34375C14.4703 2.34375 12.1859 4.64688 12.1859 7.47031C12.1859 7.87656 12.2203 8.26719 12.3047 8.63906C8.04375 8.43125 4.27344 6.38906 1.74062 3.27813C1.29844 4.04531 1.03906 4.92344 1.03906 5.86875C1.03906 7.64375 1.95312 9.21719 3.31562 10.1281C2.49219 10.1125 1.68437 9.87344 1 9.49688C1 9.5125 1 9.53281 1 9.55312C1 12.0437 2.77656 14.1125 5.10625 14.5891C4.68906 14.7031 4.23438 14.7578 3.7625 14.7578C3.43438 14.7578 3.10312 14.7391 2.79219 14.6703C3.45625 16.7 5.34063 18.1922 7.58125 18.2406C5.8375 19.6047 3.62344 20.4266 1.22656 20.4266C0.80625 20.4266 0.403125 20.4078 0 20.3563C2.27031 21.8203 4.96094 22.6562 7.8625 22.6562C17.2937 22.6562 22.45 14.8438 22.45 8.07187C22.45 7.84531 22.4422 7.62656 22.4312 7.40938C23.4484 6.6875 24.3031 5.78594 25 4.74844Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect width="25" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </li>
+          <li class="button button--black">
+            <a href="#">
+              <svg
+                width="28"
+                height="30"
+                viewBox="0 0 28 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4375 0H6.5625C2.93869 0 0 2.93869 0 6.5625V14.4375C0 18.0613 2.93869 21 6.5625 21H14.4375C18.0613 21 21 18.0613 21 14.4375V6.5625C21 2.93869 18.0613 0 14.4375 0ZM19.0312 14.4375C19.0312 16.9706 16.9706 19.0312 14.4375 19.0312H6.5625C4.02938 19.0312 1.96875 16.9706 1.96875 14.4375V6.5625C1.96875 4.02938 4.02938 1.96875 6.5625 1.96875H14.4375C16.9706 1.96875 19.0312 4.02938 19.0312 6.5625V14.4375Z"
+                  fill="white"
+                />
+                <path
+                  d="M10.5 5.25C7.60069 5.25 5.25 7.60069 5.25 10.5C5.25 13.3993 7.60069 15.75 10.5 15.75C13.3993 15.75 15.75 13.3993 15.75 10.5C15.75 7.60069 13.3993 5.25 10.5 5.25ZM10.5 13.7812C8.69138 13.7812 7.21875 12.3086 7.21875 10.5C7.21875 8.69006 8.69138 7.21875 10.5 7.21875C12.3086 7.21875 13.7812 8.69006 13.7812 10.5C13.7812 12.3086 12.3086 13.7812 10.5 13.7812Z"
+                  fill="white"
+                />
+                <path
+                  d="M16.1439 5.55586C16.5303 5.55586 16.8435 5.24266 16.8435 4.8563C16.8435 4.46994 16.5303 4.15674 16.1439 4.15674C15.7575 4.15674 15.4443 4.46994 15.4443 4.8563C15.4443 5.24266 15.7575 5.55586 16.1439 5.55586Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="button button--black">
+            <a href="#">
+              <svg
+                width="28"
+                height="30"
+                viewBox="0 0 28 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.5334 7.11763C26.2029 5.68172 25.0284 4.62234 23.6145 4.46431C20.2664 4.09056 16.8775 4.08861 13.5043 4.09056C10.1305 4.08861 6.74115 4.09056 3.39301 4.46431C1.97995 4.62234 0.806307 5.68172 0.475757 7.11763C0.0052955 9.16252 0 11.3947 0 13.5001C0 15.6055 0 17.8374 0.470462 19.882C0.800454 21.3176 1.97438 22.377 3.38827 22.5353C6.73613 22.9093 10.1252 22.9113 13.499 22.9093C16.8734 22.9113 20.2616 22.9093 23.6092 22.5353C25.0223 22.3773 26.197 21.3179 26.5276 19.882C26.9983 17.8371 27 15.6052 27 13.5001C27 11.3947 27.0039 9.16252 26.5334 7.11763ZM10.0157 17.6908C10.0157 14.7041 10.0157 11.7487 10.0157 8.76174C12.8772 10.2548 15.7198 11.7378 18.5994 13.24C15.7287 14.7289 12.8847 16.203 10.0157 17.6908Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <!--End of Footer -->
+
+    <script src="./scripts/carousel.js"></script>
+
+    <script src="./scripts/show__more.js"></script>
+
+    <script src="./scripts/toggle__menu.js"></script>
+
+    <script src="./scripts/contact.js"></script>
+  </body>
+</html>

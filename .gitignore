@@ -1,0 +1,7 @@
+#file types
+*.map
+*.scss
+
+#folders
+/components
+/sass
